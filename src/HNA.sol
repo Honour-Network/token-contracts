@@ -144,7 +144,8 @@ contract HNA is DSToken("HNA"), ERC223, Controlled {
         ERC20 token = ERC20(_token);
         uint256 balance = token.balanceOf(this);
         token.transfer(controller, balance);
-        ClaimedTokens(_token, controller, balance);
+        
+        emit ClaimedTokens(_token, controller, balance);
     }
 
     event ClaimedTokens(address indexed _token, address indexed _controller, uint256 _amount);

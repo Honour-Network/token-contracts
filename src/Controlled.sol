@@ -10,7 +10,7 @@ contract Controlled {
 
     address public controller;
 
-    constructor() public public {
+    constructor() public {
         controller = msg.sender;
     }
 
